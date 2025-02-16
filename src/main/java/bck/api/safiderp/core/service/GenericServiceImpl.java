@@ -39,7 +39,7 @@ public abstract class GenericServiceImpl<T extends BaseEntity, ID extends Serial
     public DTO findById(ID id) {
     	    T entity = repository.findById(id)
     	            .orElseThrow(() -> {
-    	                return new GenericException("NOT_FOUND",entityClass.getSimpleName()+ " - ID Not Found: " + id);
+    	                return new GenericException("NOT_FOUND",entityClass.getSimpleName()+ " - ID Not Found for: " + id);
     	            });
     	    return modelMapper.map(entity, dtoClass);
     }
