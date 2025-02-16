@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 import bck.api.safiderp.core.entity.BaseEntity;
@@ -21,6 +22,7 @@ public class ManaCompHead extends BaseEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Column(name = "name_macohe", nullable = false, length = 300)
+	@NotBlank(message = "El nombre es obligatorio")
     private String name;
 
     @Column(name = "pseudon_macohe", length = 250)
