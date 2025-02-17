@@ -7,7 +7,8 @@ import bck.api.safiderp.manage.repository.ManaCompHeadRepository;
 import org.springframework.stereotype.Service;
 
 @Service 
-public class ManaCompHeadServiceImpl extends GenericServiceImpl<ManaCompHead, Long, CompanyHeadDTO> implements ManaCompHeadService {
+public class ManaCompHeadServiceImpl extends GenericServiceImpl<ManaCompHead, Long, CompanyHeadDTO> 
+implements ManaCompHeadService {
 
     public ManaCompHeadServiceImpl(ManaCompHeadRepository repository) {
         super(repository, ManaCompHead.class, CompanyHeadDTO.class);

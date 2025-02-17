@@ -15,5 +15,5 @@ public class CompanyDetailDTO {
     private String documentB;
     private String documentC;
     private String alternate;
-    private Long companyHeadId; // Relación con la cabecera de la empresa
+    private Long companyHeadId; 
 }

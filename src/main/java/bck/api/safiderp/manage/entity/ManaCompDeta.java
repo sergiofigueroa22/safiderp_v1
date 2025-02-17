@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import bck.api.safiderp.core.entity.BaseEntity;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 
 @Entity
@@ -13,8 +15,9 @@ import jakarta.persistence.*;
 public class ManaCompDeta extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
-
+	
 	@Column(name = "name_macode", nullable = false, length = 300)
+	@NotBlank(message = "El nombre es obligatorio")
     private String name;
 
     @Column(name = "pseudon_macode", length = 250)
@@ -25,8 +28,9 @@ public class ManaCompDeta extends BaseEntity {
 
     @Column(name = "phone_macode", length = 15)
     private String phone;
-
+    
     @Column(name = "email_macode", length = 150)
+    @Email
     private String email;
 
     @Column(name = "delegat_macode", length = 150)

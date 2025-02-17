@@ -6,5 +6,5 @@ import lombok.Setter;
 @Getter
 @Setter
 public class RequestDTO<T> {
-    private T data; // Datos de la solicitud (genéricos)
+    private T data;
 }
